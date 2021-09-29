@@ -66,11 +66,7 @@ what data of my Personalausweis is used for the key?
 	GivenNames  
 	DateOfBirth  
 	PlaceOfBirth  
-
-is an attackscenario possible where someone takes the source and builds a new Credential Provider where the data are not read  
-from Personalausweis and the attacker writes them direct in the code and generates the key?  
-	yes theoretical, but first he also must know the adminpassword and second if the admin keeps his pc safe noone can install  
-	a attackerplugin or copy the database  
+ 
 
 
 

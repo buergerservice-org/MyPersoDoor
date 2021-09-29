@@ -38,10 +38,6 @@ then you will be asked if you want to store your hashkey. it will be attached to
 after that you see the certificate and your data that are read from your Personalausweis.   
 now there should be a file PIN.txt and a file hashkey.txt (you see with ls)   
 you can start persodoor
-```
-./persodoor
-```
-it logs to persodoor.log in the same directory   
 
 
 

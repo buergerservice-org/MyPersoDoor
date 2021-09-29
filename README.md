@@ -1,5 +1,6 @@
 # PersoDoor
-With this program you can open a door with your german Personalausweis  
+With this program you can open a door with your german Personalausweis.  
+We use a Raspberry Pi and a GPIO-Pin that switches over a relay the dooropener.    
 
 Version: 0.1 
 Author: buergerservice.org e.V. <KeePerso@buergerservice.org>  
@@ -19,11 +20,13 @@ internetaccess
 1 relay  
 1 12V-powersupply  
 1 dooropener
+Dupont jumper cables   
+
 
 -------------
 installation:
 -------------
-
+copy to a directory persodoor
 
 -----------
 how to use:

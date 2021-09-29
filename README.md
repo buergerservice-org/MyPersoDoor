@@ -16,7 +16,9 @@ AusweisApp2
 cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
 for online identification ready Personalausweis - you can test it in AusweisApp2 with "Meine Daten einsehen"  
 internetaccess  
-
+1 relay  
+1 12V-powersupply  
+1 dooropener
 
 -------------
 installation:

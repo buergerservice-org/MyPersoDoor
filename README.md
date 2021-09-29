@@ -1,6 +1,6 @@
 # PersoDoor
 With this program you can open a door with your german Personalausweis.  
-We use a Raspberry Pi and a GPIO-Pin that switches over a relay the dooropener.    
+We use a Raspberry Pi and its GPIO-Pin that switches over a relay the dooropener.    
 
 Version: 0.1 
 Author: buergerservice.org e.V. <KeePerso@buergerservice.org>  
@@ -27,12 +27,32 @@ Dupont jumper cables
 installation:
 -------------
 copy to a directory persodoor
+first start AusweisApp2
+attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
+start workflowClient with your PIN
+```
+./worflowClient 123456
+```
+you will be asked if you want to store your PIN. The file will be overwritten. This works only for one person, only this person can open without PIN-input.   
+then you will be asked if you want to store your hashkey. it will be attached to the file and other hashkeys if exist.
+after that you see the certificate and your data that are read from your Personalausweis.   
+now there should be a file PIN.txt and a file hashkey.txt (you see with ls)   
+you can start persodoor
+```
+./persodoor
+```
+it logs to persodoor.log in the same directory   
+
+
 
 -----------
 how to use:
 -----------
 start AusweisApp2  
-start persodoor from shell ./persodoor  
+start persodoor from shell 
+```
+./persodoor
+```
 it logs to persodoor.log in the same directory  
 
 

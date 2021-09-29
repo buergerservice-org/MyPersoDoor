@@ -31,7 +31,7 @@ first start AusweisApp2
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
 start workflowClient with your PIN
 ```
-./worflowClient 123456
+./workflowClient 123456
 ```
 you will be asked if you want to store your PIN. The file will be overwritten. This works only for one person, only this person can open without PIN-input.   
 then you will be asked if you want to store your hashkey. it will be attached to the file and other hashkeys if exist.

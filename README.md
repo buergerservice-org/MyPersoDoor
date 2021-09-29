@@ -19,7 +19,7 @@ for online identification ready Personalausweis - you can test it in AusweisApp2
 internetaccess  
 1 relay  
 1 12V-powersupply  
-1 dooropener
+1 dooropener  
 Dupont jumper cables   
 
 

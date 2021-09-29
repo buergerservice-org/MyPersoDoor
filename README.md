@@ -5,7 +5,7 @@ Version: 0.1
 Author: buergerservice.org e.V. <KeePerso@buergerservice.org>  
 
 
-![Screenshot](screenshot1.jpg)
+![Screenshot](screenshot1.JPG)
 
 -------------
 requirements:

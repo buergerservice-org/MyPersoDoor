@@ -26,10 +26,10 @@ Dupont jumper cables
 -------------
 installation:
 -------------
-copy to a directory persodoor
-first start AusweisApp2
+copy to a directory persodoor   
+first start AusweisApp2   
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
-start workflowClient with your PIN
+start workflowClient with your PIN   
 ```
 ./workflowClient 123456
 ```

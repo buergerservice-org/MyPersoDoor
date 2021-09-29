@@ -10,10 +10,10 @@ Author: buergerservice.org e.V. <KeePerso@buergerservice.org>
 -------------
 requirements:
 -------------
-Raspberry Pi with Raspberry Pi OS Bullseye (atm only in testmode avaiable but will be released soon)
+Raspberry Pi with Raspberry Pi OS Bullseye (atm only in testmode avaiable but will be released soon)  
 program workflowClient for the admin   
-AusweisApp2
-cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI) 
+AusweisApp2  
+cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
 for online identification ready Personalausweis - you can test it in AusweisApp2 with "Meine Daten einsehen"  
 internetaccess  
 
@@ -26,9 +26,9 @@ installation:
 -----------
 how to use:
 -----------
-start AusweisApp2
-start persodoor from shell ./persodoor 
-it logs to persodoor.log in the same directory
+start AusweisApp2  
+start persodoor from shell ./persodoor  
+it logs to persodoor.log in the same directory  
 
 
 ----------------------------
@@ -61,7 +61,7 @@ versionhistory:
 -----
 build
 -----
-use the build-scripts ./build.sh
+use the build-scripts ./build.sh  
 
 
 

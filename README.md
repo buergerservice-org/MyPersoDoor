@@ -1,6 +1,6 @@
 # PersoDoor
 With this program you can open a door with your german Personalausweis.  
-We use a Raspberry Pi and its GPIO-Pin that switches over a relay the dooropener.    
+We use a Raspberry Pi and its GPIO-Pin that switches over a relay the doorstriker.    
 
 Version: 0.1 
 Author: buergerservice.org e.V. <KeePerso@buergerservice.org>  
@@ -11,7 +11,7 @@ Author: buergerservice.org e.V. <KeePerso@buergerservice.org>
 -------------
 requirements:
 -------------
-Raspberry Pi with Raspberry Pi OS Bullseye (atm only in testmode avaiable but will be released soon)  
+Raspberry Pi with Raspberry Pi OS bullseye (atm only in testversion avaiable but will be released soon)  
 program workflowClient for the admin   
 AusweisApp2  
 cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
@@ -19,7 +19,7 @@ for online identification ready Personalausweis - you can test it in AusweisApp2
 internetaccess  
 1 relay  
 1 12V-powersupply  
-1 dooropener  
+1 doorstriker
 Dupont jumper cables   
 
 

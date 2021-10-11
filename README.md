@@ -59,7 +59,7 @@ start persodoor from shell
 ./persodoor
 ```
 on your smartphone start AusweisApp2 and connect.   
-#DONT REMOVE YOUR PERSONALAUSWEIS FOR 10SEC TIL THE DOOR OPENS!
+**DONT REMOVE YOUR PERSONALAUSWEIS FOR 10SEC TIL THE DOOR OPENS!**
 
 it logs to persodoor.log in the same directory  
 

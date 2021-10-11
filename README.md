@@ -1,4 +1,4 @@
-# PersoDoor
+# MyPersoDoor
 With this program you can open a door with your german Personalausweis.  
 We use a Raspberry Pi and its GPIO-Pin that switches over a relay the doorstriker.    
 

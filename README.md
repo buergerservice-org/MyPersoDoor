@@ -27,7 +27,6 @@ Dupont jumper cables
 -----------
 connection:
 -----------
-connection:
 ![Connection](connection.jpg)
 
 

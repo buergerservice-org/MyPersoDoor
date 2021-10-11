@@ -23,6 +23,15 @@ internetaccess
 Dupont jumper cables   
 
 
+
+-----------
+connection:
+-----------
+connection:
+![Connection](connection.jpg)
+
+
+
 -------------
 installation:
 -------------
@@ -51,6 +60,7 @@ start persodoor from shell
 ./persodoor
 ```
 it logs to persodoor.log in the same directory  
+
 
 
 ----------------------------

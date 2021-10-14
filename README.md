@@ -58,7 +58,7 @@ start persodoor from shell
 ```
 ./persodoor
 ```
-on your smartphone start AusweisApp2 and connect.   
+on your smartphone start AusweisApp2 and connect. hold personalausweis on phone.    
 **DONT REMOVE YOUR PERSONALAUSWEIS FOR 10SEC TIL THE DOOR OPENS!**
 
 it logs to persodoor.log in the same directory  

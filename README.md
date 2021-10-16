@@ -41,8 +41,8 @@ start workflowClient with your PIN (in the same directory where the persodoor-pr
 ```
 ./workflowClient 123456
 ```
-you will be asked if you want to store your PIN. The file will be overwritten. This works only for one person, only this person can open without PIN-input.   
-all others should enter n at this point and activate the PIN-input in AusweisApp2 in their smartphone.    
+you will be asked if you want to store your PIN. The file will be overwritten. This default PIN works only for one person, only this person can open without PIN-input. WARNING: the PIN is not encrypted in PIN.txt. if you store your PIN you have to secure your raspberry pi for yourself.
+all other persons should enter n at this point and activate the PIN-input in AusweisApp2 in their smartphone.    
 then you will be asked if you want to store your hashkey. it will be attached to the file and other hashkeys if exist.
 after that you see the certificate and your data that are read from your Personalausweis.   
 now there should be a file PIN.txt and a file hashkey.txt (you see with ls)   

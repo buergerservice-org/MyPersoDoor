@@ -61,6 +61,8 @@ start persodoor from shell
 on your smartphone start AusweisApp2 and connect. hold personalausweis on phone.    
 **DONT REMOVE YOUR PERSONALAUSWEIS FOR 10SEC TIL THE DOOR OPENS!**
 
+between every Personalausweis-selfauthentication in persodoor it waits 15 seconds.   
+
 it logs to persodoor.log in the same directory  
 
 

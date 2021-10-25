@@ -40,13 +40,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>buergerserviceorg.jpg</pixmap>
+     <pixmap resource="resources.qrc">:/new/prefix1/buergerserviceorg.jpg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="adduButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>630</x>
       <y>80</y>
       <width>141</width>
       <height>30</height>
@@ -59,7 +59,7 @@
    <widget class="QPushButton" name="deluButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>630</x>
       <y>130</y>
       <width>141</width>
       <height>30</height>
@@ -72,7 +72,7 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>270</y>
       <width>591</width>
       <height>221</height>
@@ -82,7 +82,7 @@
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>630</x>
       <y>270</y>
       <width>141</width>
       <height>30</height>
@@ -95,7 +95,7 @@
    <widget class="QPushButton" name="stopButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>630</x>
       <y>320</y>
       <width>141</width>
       <height>30</height>
@@ -108,7 +108,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>60</y>
       <width>201</width>
       <height>22</height>
@@ -121,7 +121,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>250</y>
       <width>231</width>
       <height>22</height>
@@ -134,7 +134,7 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>80</y>
       <width>591</width>
       <height>161</height>
@@ -190,7 +190,9 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>cancelButton</sender>

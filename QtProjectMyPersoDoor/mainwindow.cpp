@@ -166,7 +166,7 @@ void MainWindow::on_adduserButton_clicked()
     bool ok;
 
     QString itext = QInputDialog::getText(this,
-        tr(""),
+        tr(" "),
         tr("Benutzername:"),
         QLineEdit::Normal,
         "",
@@ -299,19 +299,7 @@ void MainWindow::on_adduserButton_clicked()
         return;
     }
 
-
-    //generate password
-    //addstr = "";
-    //curitem = ui.ListWidget->currentItem()->text();
-    //addstr = curitem.toUtf8().constData() + outputstring;
-    //outputstring = w.sha256(addstr);
-    //srand(stoui(outputstring));
-    //outputstring = generateUpperCase(1) + generateSpecialSign(1) + outputstring;
     wfoutput = QString::fromUtf8(outputstring.c_str());
-    //ui.lineEdit->setText(wfoutput);
-
-    //QClipboard* clipboard = QGuiApplication::clipboard();
-    //clipboard->setText(wfoutput);
 
     outputstring = wf.GivenNames;
     outputstring = outputstring.append(", for your information the data from Personalausweis:\n\n\n");
@@ -362,14 +350,14 @@ void MainWindow::on_adduserButton_clicked()
     {
         //set username in ui
         ui->listWidget->addItem(itext);
-        ui->listWidget->repaint();
+
+        //ui->listWidget->repaint();
         QStringList newuser;
-        newuser[0]=itext;
-        newuser[1]=wfoutput;
+        newuser.append(itext);
+        newuser.append(wfoutput);
         datab.append(newuser);
-        //qApp->processEvents();
-        //write database
-        //QFile file("database.txt");
+
+        writedata();
     }
     else
     {
@@ -379,7 +367,6 @@ void MainWindow::on_adduserButton_clicked()
         msgBox.exec();
         return;
     }
-    writedata();
 }
 
 

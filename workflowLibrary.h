@@ -18,7 +18,7 @@ namespace workflowLibrary
 		std::string startworkflow(std::string PINstring);
 		std::string getkeypad();
 		std::string getcertificate();
-		std::string readjson(std::string);
+		std::string readjson(std::string inputstring);
 
 		//openssl wrapper
 		std::string sha256(const std::string str);

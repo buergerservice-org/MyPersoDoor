@@ -11,7 +11,8 @@ Author: buergerservice.org e.V. <KeePerso@buergerservice.org>
 -------------
 requirements:
 -------------
-Raspberry Pi with Raspberry Pi OS bullseye (atm only in testversion avaiable but will be released soon)  
+Raspberry Pi with Raspberry Pi OS bullseye  
+atm (Oct 2021) bullseye is only avaiable in testversion but will be released soon https://forums.raspberrypi.com/viewtopic.php?f=29&t=317888   
 program workflowClient for the admin   
 AusweisApp2  
 cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
@@ -37,6 +38,15 @@ installation:
 copy to a directory persodoor   
 first start AusweisApp2   
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
+
+start the GUI-app MyPersoDoor and register the users with "Neuer Benutzer".   
+```
+./MyPersoDoor (or start by mouseclick)
+```
+![MyPersoDoor](MyPersoDoor.jpg)
+
+
+as alternative to GUI-Program MyPersoDoor you can use from shell workflowClient for registering users (but if you use MyPersoDoor you dont need!):   
 start workflowClient with your PIN (in the same directory where the persodoor-program is installed)    
 ```
 ./workflowClient 123456
@@ -54,7 +64,10 @@ you can start persodoor
 how to use:
 -----------
 start AusweisApp2  
-start persodoor from shell 
+start MyPersoDoor and click on "Starten"   
+
+
+as alternative to GUI-Program MyPersoDoor you can start from shell persodoor direct (but if you use MyPersoDoor you dont need!):   
 ```
 ./persodoor
 ```
@@ -94,6 +107,8 @@ versionhistory:
 build
 -----
 use the build-scripts ./build.sh  
+to build the GUI-app MyPersoDoor in directory QtProjectMyPersoDoor you should use Qt Creator   
+
 
 
 

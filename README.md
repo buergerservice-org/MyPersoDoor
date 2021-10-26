@@ -11,7 +11,8 @@ Author: buergerservice.org e.V. <KeePerso@buergerservice.org>
 -------------
 requirements:
 -------------
-Raspberry Pi with Raspberry Pi OS bullseye (atm only in testversion avaiable but will be released soon)  
+Raspberry Pi with Raspberry Pi OS bullseye  
+atm (End 2021) its only in testversion avaiable but will be released soon https://forums.raspberrypi.com/viewtopic.php?f=29&t=317888 )     
 program workflowClient for the admin   
 AusweisApp2  
 cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  

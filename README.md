@@ -40,6 +40,14 @@ first start AusweisApp2
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
 
 start the GUI-app MyPersoDoor and register the users with "Neuer Benutzer".   
+
+You can store one default-PIN in the menu. This default PIN works only for one person, only this person can open without PIN-input.   
+WARNING: the PIN is not encrypted in PIN.txt. if you store your PIN you have to secure your raspberry pi for yourself.   
+
+You can see the certificate in the menu under "Info".   
+
+The program persodoor can be started with "Starten" or stopped with "Stoppen".   
+
 ```
 ./MyPersoDoor (or start by mouseclick)
 ```

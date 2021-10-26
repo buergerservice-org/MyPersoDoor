@@ -67,7 +67,6 @@ start MyPersoDoor and click on "Starten"
 
 
 as alternative to GUI-Program MyPersoDoor you can start from shell persodoor direct (but if you use MyPersoDoor you dont need!):   
-start persodoor from shell  
 ```
 ./persodoor
 ```

@@ -39,7 +39,7 @@ first start AusweisApp2
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
 
 start the GUI-app MyPersoDoor and register the users with "Neuer Benutzer".   
-./MyPersoDoor
+./MyPersoDoor (or start by mouseclick)   
 ![MyPersoDoor](MyPersoDoor.jpg)
 
 
@@ -61,7 +61,10 @@ you can start persodoor
 how to use:
 -----------
 start AusweisApp2  
-start persodoor from shell 
+start MyPersoDoor and click on "Starten"   
+
+as alternative to GUI-Program MyPersoDoor you can start from shell persodoor direct (but if you use MyPersoDoor you dont need!):   
+start persodoor from shell  
 ```
 ./persodoor
 ```

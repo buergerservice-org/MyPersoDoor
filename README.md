@@ -106,6 +106,8 @@ versionhistory:
 build
 -----
 use the build-scripts ./build.sh  
+to build the GUI-app MyPersoDoor in directory QtProjectMyPersoDoor you should use Qt Creator   
+
 
 
 

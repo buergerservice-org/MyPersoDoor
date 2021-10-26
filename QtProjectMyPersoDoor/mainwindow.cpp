@@ -388,7 +388,7 @@ void MainWindow::on_startButton_clicked()
     QString Info;
     bool startedok;
     std::string outputstring="";
-    outputstring = commandexec("ps -ef | grep \"./persodoor\" | grep -v grep");
+    outputstring = commandexec("pgrep -x \"persodoor\"");
     if (outputstring != "")
     {
         Info = "Programm persodoor laeuft bereits!\n";

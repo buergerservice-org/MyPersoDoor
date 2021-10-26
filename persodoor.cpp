@@ -1,5 +1,9 @@
-// persodoor.cpp
+// workflowClient.cpp : Test of workflowLibrary
 // Copyright (C) 2021 buergerservice.org e.V. <KeePerso@buergerservice.org>
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at
+// https://www.boost.org/LICENSE_1_0.txt)
+
 
 #include <iostream>
 #include <cstdio>
@@ -45,7 +49,8 @@ std::string commandexec(const char* cmd) {
 
 
 
-void writelog(FILE *l, std::string s){
+void writelog(std::string s){
+    FILE *log;
     time_t rawtime;
     struct tm * timeinfo;
     std::string c;
@@ -53,12 +58,14 @@ void writelog(FILE *l, std::string s){
     time(&rawtime);
     timeinfo=localtime(&rawtime);
 
+    log = fopen("persodoor.log", "a+");
     //printf("local time and date: %s", ctime(&rawtime));
 
     strftime(buffer,sizeof(buffer),"%d-%m-%Y %H:%M:%S",timeinfo);
     std::string str(buffer);
     c=str +": " + s;  
-    fprintf(l, c.c_str());
+    fprintf(log, c.c_str());
+    fclose(log);
 }
 
 
@@ -81,7 +88,7 @@ int main(int argc, char** argv)
 
     //std::locale::global(std::locale("German_germany.UTF-8"));
 
-    FILE *log;
+    //FILE *log;
     FILE *hashkey;
     FILE *fp;
     FILE *PINfile;
@@ -93,12 +100,12 @@ int main(int argc, char** argv)
     struct tm * timeinfo;
 
 
-    log = fopen("persodoor.log", "a+");
+    //log = fopen("persodoor.log", "a+");
 
     //hashkey = fopen("hashkey.txt", "r");
     PINfile=fopen("PIN.txt", "r");
 
-    writelog(log, "persodoor started.\n"); 
+    writelog("persodoor started.\n"); 
 
 
     //instantiate a new workflowclass
@@ -130,19 +137,7 @@ int main(int argc, char** argv)
     {
         PINstring="123456";
     }
-    //std::cout << "PIN= " << PINstring << std::endl;
-    /*
-    if(hashkey==NULL) perror ("Error opening file hashkey.txt");
-    else
-    {
-        while(fgets(mystring, 100, hashkey)!=NULL)
-        {
-            std::cout << "hashkey(s) from file : " << std::string(mystring) << std::endl;
-            myhashkey=std::string(mystring);
-            myhashkey.erase(std::remove_if(myhashkey.begin(), myhashkey.end(), isSpace()), myhashkey.end());
-        }
-    }
-    */
+
 
     while(true)
     {
@@ -150,7 +145,7 @@ int main(int argc, char** argv)
         //std::this_thread::sleep_for(std::chrono::milliseconds(2000));
         std::cout << "---------------------------------------" << std::endl;
         std::cout << "starting startworkflow." << std::endl;
-        writelog(log, "startworkflow.\n");
+        writelog("startworkflow.\n");
 
         workflowoutputstring = wf.startworkflow(PINstring);
 
@@ -159,19 +154,19 @@ int main(int argc, char** argv)
         {
             std::cout << "ERROR - please check AusweisApp2, cardreader and Personalausweis!Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e1 - please check AusweisApp2. cardreader. Personaausweis.\n");
+            writelog("ERROR e1 - please check AusweisApp2, cardreader, Personalausweis.\n");
         }
         else if (outputstring == "e2")
         {
             std::cout << "ERROR - please check your Personalausweis! Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e2 - please check Personaausweis.\n");
+            writelog("ERROR e2 - please check Personaausweis.\n");
         }
         else if (outputstring == "e3")
         {
             std::cout << "ERROR - please check your cardreader! Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e3 - please check cardreader.\n");
+            writelog("ERROR e3 - please check cardreader.\n");
         }
         else if (outputstring == "e4")
         {
@@ -179,19 +174,19 @@ int main(int argc, char** argv)
             //std::cout << "ERROR - AusweisApp2-version less than 1.22.* please update! Exiting Plugin." << std::endl;
             std::cout << "ERROR - AusweisApp2-version less than 1.20.* please update! Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e4 - AusweisApp2-version too low.\n");
+            writelog("ERROR e4 - AusweisApp2-version too low.\n");
         }
         else if (outputstring == "e5")
         {
             std::cout << "Warning - retryCounter of Perso <3, please start a selfauthentication direct with AusweisApp2! Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e5 - retryCounter <3.\n");
+            writelog("ERROR e5 - retryCounter <3.\n");
         }
         else if (outputstring == "e7")
         {
             std::cout << "ERROR - no cardreader found! Exiting Plugin." << std::endl;
             //return EXIT_FAILURE;
-            writelog(log, "ERROR e7 - no cardreader found.\n");
+            writelog("ERROR e7 - no cardreader found.\n");
         }
         else 
         {
@@ -224,24 +219,25 @@ int main(int argc, char** argv)
             if(hashok)
             {
                std::cout << "hashkeys are equal - unlocking door" << std::endl;
-               writelog(log, "unlocking door for hashkey "+workflowoutputstring+"\n");
+               writelog("unlocking door for hashkey "+workflowoutputstring+"\n");
                outputstring = commandexec("python3 locking.py");
                std::cout << outputstring << std::endl;
             }
             else
             {
                std::cout << "hashkeys are not equal - access denied" << std::endl;
-               writelog(log, "access denied for hashkey "+workflowoutputstring+"\n");
+               writelog("access denied for hashkey "+workflowoutputstring+"\n");
 
             }
         }
         std::cout << "waiting 15 seconds..." << std::endl;
         outputstring = commandexec("sleep 15");
+        writelog("waiting 15 seconds...\n");
     }
 
     //fclose(hashkey);
     fclose(PINfile);
-    fclose(log);
+    //fclose(log);
 
 }
 

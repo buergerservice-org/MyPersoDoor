@@ -37,6 +37,22 @@ installation:
 copy to a directory persodoor   
 first start AusweisApp2   
 attach cardreader or smartphone with AusweisApp2 on the same WLAN (connect in AusweisApp2-GUI)  
+<<<<<<< HEAD
+=======
+
+start the GUI-app MyPersoDoor and register the users with "Neuer Benutzer".   
+
+You can store one default-PIN in the menu. This default PIN works only for one person, only this person can open without PIN-input.   
+WARNING: the PIN is not encrypted in PIN.txt. if you store your PIN you have to secure your raspberry pi for yourself.   
+
+```
+./MyPersoDoor (or start by mouseclick)
+```
+![MyPersoDoor](MyPersoDoor.jpg)
+
+
+as alternative to GUI-Program MyPersoDoor you can use from shell workflowClient for registering users (but if you use MyPersoDoor you dont need!):   
+>>>>>>> 5672169e5629189c5a71e931762b981e4ddc84b8
 start workflowClient with your PIN (in the same directory where the persodoor-program is installed)    
 ```
 ./workflowClient 123456
@@ -54,7 +70,17 @@ you can start persodoor
 how to use:
 -----------
 start AusweisApp2  
+<<<<<<< HEAD
 start persodoor from shell 
+=======
+
+start MyPersoDoor, you should have registered the users and maybe stored a default-PIN.   
+You can see the certificate in the menu under "Info".   
+The program persodoor can be started with "Starten" or stopped with "Stoppen".   
+
+
+as alternative to GUI-Program MyPersoDoor you can start from shell persodoor direct (but if you use MyPersoDoor you dont need!):   
+>>>>>>> 5672169e5629189c5a71e931762b981e4ddc84b8
 ```
 ./persodoor
 ```

@@ -45,7 +45,7 @@ You can store one default-PIN in the menu. This default PIN works only for one p
 WARNING: the PIN is not encrypted in PIN.txt. if you store your PIN you have to secure your raspberry pi for yourself.   
 
 ```
-./MyPersoDoor (or start by mouseclick)
+./MyPersoDoorStart (or start by mouseclick)
 ```
 ![MyPersoDoor](MyPersoDoor.jpg)
 
@@ -69,7 +69,10 @@ how to use:
 -----------
 start AusweisApp2  
 
-start MyPersoDoor, you should have registered the users and maybe stored a default-PIN.   
+start MyPersoDoor, you should have registered the users and maybe stored a default-PIN.  
+```
+./MyPersoDoorStart (or start by mouseclick)
+```
 You can see the certificate in the menu under "Info".   
 The program persodoor can be started with "Starten" or stopped with "Stoppen".   
 

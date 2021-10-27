@@ -132,6 +132,10 @@ MainWindow::MainWindow(QWidget *parent)
         ui->listWidget->repaint();
     }
     //start show the log every 1,5sec
+    if(!QFileInfo("persodoor.log").exists())
+    {
+        commandexec("touch persodoor.log");
+    }
     QTimer* timer = new QTimer();
     timer->setInterval(1500);
     connect(timer, &QTimer::timeout, this, &MainWindow::showlog);

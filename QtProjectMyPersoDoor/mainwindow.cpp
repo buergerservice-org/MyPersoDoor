@@ -13,7 +13,7 @@
 #include <QDataStream>
 #include <QProcess>
 #include <QTimer>
-//#include <QApplication>
+#include <QFileInfo>
 
 #include <string>
 #include <stdint.h>
@@ -111,31 +111,33 @@ MainWindow::MainWindow(QWidget *parent)
 
     //read database
     QFile file("database.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    if(QFileInfo(file).exists())
     {
-        msgBox.setIcon(QMessageBox::Critical);
-        msgBox.setWindowTitle("ERROR");
-        msgBox.setText("ERROR - database.txt kann nicht geoeffnet werden.");
-        msgBox.exec();
-        return;
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            msgBox.setIcon(QMessageBox::Critical);
+            msgBox.setWindowTitle("ERROR");
+            msgBox.setText("ERROR - database.txt kann nicht geoeffnet werden.\n");
+            msgBox.exec();
+            return;
+        }
+        QTextStream in(&file);
+        while(!in.atEnd())
+        {
+            QString line=in.readLine();
+            QStringList splitline=line.split(';');
+            ui->listWidget->addItem(splitline[0]);
+            datab.append(splitline);
+        }
+        ui->listWidget->repaint();
     }
-    QTextStream in(&file);
-    while(!in.atEnd())
-    {
-        QString line=in.readLine();
-        QStringList splitline=line.split(';');
-        ui->listWidget->addItem(splitline[0]);
-        datab.append(splitline);
-    }
-    ui->listWidget->repaint();
-
     //start show the log every 1,5sec
     QTimer* timer = new QTimer();
     timer->setInterval(1500);
     connect(timer, &QTimer::timeout, this, &MainWindow::showlog);
     timer->start();
-
 }
+
 
 MainWindow::~MainWindow()
 {
@@ -171,7 +173,6 @@ void MainWindow::on_adduserButton_clicked()
         QLineEdit::Normal,
         "",
         &ok);
-
 
     outputstring = wf.getkeypad();
     msgBox.setIcon(QMessageBox::Critical);
